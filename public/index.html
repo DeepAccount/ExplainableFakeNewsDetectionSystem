@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+    <center><h1>Fake News Detection</h1></center>
+</head>
+
+<body>
+
+    <center>
+    <form method="post" action="doform">
+        <div>
+
+            <textarea id="content"  name="content" rows="10" cols="100" placeholder="Enter news text..." ></textarea>
+
+
+        </div>
+        <br/>
+        <div>
+            <label for="documents_count">Search Intensity (Number of candidate documents to be used) :</label>
+            <select name="documents_count" id="documents_count">
+                <option value="5">Small: ~5 documents </option>
+                <option value="10">Medium: ~10 documents </option>
+                <option value="20">Heavy : ~20 documents </option>
+            </select>
+        </div>
+        <div>
+            <label for="sentence_similarity_percentage">Minimum Percentage of sentences to match for document to be similar :</label>
+            <select name="sentence_similarity_percentage" id="sentence_similarity_percentage">
+                <option value="100">100</option>
+                <option value="75">75</option>
+                <option value="50">50</option>
+            </select>
+        </div>
+        <div>
+            <label for="match_condition">Matching Condition :</label>
+            <select name="match_condition" id="match_condition">
+                <option value="nearest">Nearest Match (Single Document)</option>
+                <option value="averaged">Averaged Match (Multiple document)</option>
+            </select>
+        </div>
+
+
+        <br/>
+        <br/>
+        <button type="submit">Submit</button>
+    </form>
+    </center>
+
+</body>
+
+</html>
